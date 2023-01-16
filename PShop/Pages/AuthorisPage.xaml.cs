@@ -26,12 +26,12 @@ namespace PShop.Pages
 		{
 			InitializeComponent();
 		}
-		private void btnReg_Click(object sender, RoutedEventArgs e)
+		private void btnRegClick(object sender, RoutedEventArgs e)
 		{
 			NavigationService.Navigate(new RegPage());
 		}
 
-		private void btnEnter_Click(object sender, RoutedEventArgs e)
+		private void btnEnterClick(object sender, RoutedEventArgs e)
 		{
 			string login = tbLog.Text.Trim();
 			string password = tbPass.Password.Trim();
