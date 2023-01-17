@@ -16,28 +16,13 @@ using System.Windows.Shapes;
 namespace PShop.Pages
 {
 	/// <summary>
-	/// Логика взаимодействия для MainPage.xaml
+	/// Логика взаимодействия для ClientPage.xaml
 	/// </summary>
-	public partial class MainPage : Page
+	public partial class ClientPage : Page
 	{
-		public MainPage()
+		public ClientPage()
 		{
 			InitializeComponent();
-		}
-
-		private void btnBackClick(object sender, RoutedEventArgs e)
-		{
-			NavigationService.Navigate(new AuthorisPage());
-		}
-
-		private void btnClient_Click(object sender, RoutedEventArgs e)
-		{
-
-		}
-
-		private void btnPen_Click(object sender, RoutedEventArgs e)
-		{
-
 		}
 	}
 }

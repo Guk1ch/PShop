@@ -42,7 +42,7 @@ namespace PShop.Pages
 			}
 			else if (user != null)
 			{
-				MessageBox.Show("Все гуд");
+				NavigationService.Navigate(new MainPage());
 			}
 
 		}

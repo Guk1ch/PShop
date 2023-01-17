@@ -9,6 +9,24 @@
       Title="MainPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="0.5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="PENShop" FontSize="40" FontWeight="Bold" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnBack" Content="Выйти" Grid.Column="0" Margin="5" Grid.Row="0" Click="btnBackClick"/>
+        <Button x:Name="btnClient" Content="Клиентs" Grid.Column="0" Grid.Row="2" Grid.RowSpan="3" Margin="5" Click="btnClient_Click"/>
+        <Button x:Name="btnPen" Content="Ручки" Grid.Column="0" Grid.Row="5" Grid.RowSpan="3" Margin="5" Click="btnPen_Click"/>
     </Grid>
 </Page>
