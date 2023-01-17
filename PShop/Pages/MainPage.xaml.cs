@@ -30,14 +30,51 @@ namespace PShop.Pages
 			NavigationService.Navigate(new AuthorisPage());
 		}
 
-		private void btnClient_Click(object sender, RoutedEventArgs e)
+	
+
+		private void tbBtn_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+			MessageBox.Show("Я работаю");
+		}
+
+		private void tbBtn_MouseEnter(object sender, MouseEventArgs e)
+		{
+			tbBtn.Foreground = new SolidColorBrush(Colors.Red);
+		}
+
+		private void tbBtn_MouseLeave(object sender, MouseEventArgs e)
+		{
+			tbBtn.Foreground = new SolidColorBrush(Colors.Black);
+		}
+
+		private void tbBtn1_MouseDown(object sender, MouseButtonEventArgs e)
 		{
 
 		}
 
-		private void btnPen_Click(object sender, RoutedEventArgs e)
+		private void tbBt2_MouseDown(object sender, MouseButtonEventArgs e)
 		{
 
+		}
+
+		private void tbBtn1_MouseEnter(object sender, MouseEventArgs e)
+		{
+			tbBtn1.Foreground = new SolidColorBrush(Colors.Red);
+		}
+
+		private void tbBt2_MouseEnter(object sender, MouseEventArgs e)
+		{
+			tbBt2.Foreground = new SolidColorBrush(Colors.Red);
+		}
+
+		private void tbBt2_MouseLeave(object sender, MouseEventArgs e)
+		{
+			tbBt2.Foreground = new SolidColorBrush(Colors.Black);
+		}
+
+		private void tbBtn1_MouseLeave(object sender, MouseEventArgs e)
+		{
+			tbBtn1.Foreground = new SolidColorBrush(Colors.Black);
 		}
 	}
 }

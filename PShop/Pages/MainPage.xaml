@@ -25,8 +25,13 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock Text="PENShop" FontSize="40" FontWeight="Bold" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Grid.Column="0" Grid.Row="1" Grid.RowSpan="4" Orientation="Vertical">
+            <TextBlock x:Name="tbBtn" Text="Кнопка" FontSize="20" MouseDown="tbBtn_MouseDown" MouseEnter="tbBtn_MouseEnter" Margin="5" MouseLeave="tbBtn_MouseLeave"/>
+            <TextBlock x:Name="tbBtn1" Text="Кнопка" FontSize="20"  MouseDown="tbBtn1_MouseDown" MouseEnter="tbBtn1_MouseEnter" Margin="5" MouseLeave="tbBtn1_MouseLeave"/>
+            <TextBlock x:Name="tbBt2" Text="Кнопка" FontSize="20"  MouseDown="tbBt2_MouseDown" MouseEnter="tbBt2_MouseEnter" Margin="5" MouseLeave="tbBt2_MouseLeave"/>
+            
+        </StackPanel>
         <Button x:Name="btnBack" Content="Выйти" Grid.Column="0" Margin="5" Grid.Row="0" Click="btnBackClick"/>
-        <Button x:Name="btnClient" Content="Клиентs" Grid.Column="0" Grid.Row="2" Grid.RowSpan="3" Margin="5" Click="btnClient_Click"/>
-        <Button x:Name="btnPen" Content="Ручки" Grid.Column="0" Grid.Row="5" Grid.RowSpan="3" Margin="5" Click="btnPen_Click"/>
+       
     </Grid>
 </Page>
