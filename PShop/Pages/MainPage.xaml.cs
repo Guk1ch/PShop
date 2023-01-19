@@ -34,7 +34,7 @@ namespace PShop.Pages
 
 		private void tbBtn_MouseDown(object sender, MouseButtonEventArgs e)
 		{
-			MessageBox.Show("Я работаю");
+			NavigationService.Navigate(new PenPage());
 		}
 
 		private void tbBtn_MouseEnter(object sender, MouseEventArgs e)
@@ -47,21 +47,26 @@ namespace PShop.Pages
 			tbBtn.Foreground = new SolidColorBrush(Colors.Black);
 		}
 
+
+
 		private void tbBtn1_MouseDown(object sender, MouseButtonEventArgs e)
 		{
-
+			NavigationService.Navigate(new ClientsPage());
 		}
-
-		private void tbBt2_MouseDown(object sender, MouseButtonEventArgs e)
-		{
-
-		}
-
 		private void tbBtn1_MouseEnter(object sender, MouseEventArgs e)
 		{
 			tbBtn1.Foreground = new SolidColorBrush(Colors.Red);
 		}
+		private void tbBtn1_MouseLeave(object sender, MouseEventArgs e)
+		{
+			tbBtn1.Foreground = new SolidColorBrush(Colors.Black);
+		}
 
+
+		private void tbBt2_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+			NavigationService.Navigate(new OrdersPage());
+		}
 		private void tbBt2_MouseEnter(object sender, MouseEventArgs e)
 		{
 			tbBt2.Foreground = new SolidColorBrush(Colors.Red);
@@ -72,9 +77,26 @@ namespace PShop.Pages
 			tbBt2.Foreground = new SolidColorBrush(Colors.Black);
 		}
 
-		private void tbBtn1_MouseLeave(object sender, MouseEventArgs e)
+		
+
+		private void btnVisblClick(object sender, RoutedEventArgs e)
 		{
-			tbBtn1.Foreground = new SolidColorBrush(Colors.Black);
+			spbtn.Visibility = Visibility.Visible;
+		}
+
+		private void tbCloseMouseDown(object sender, MouseButtonEventArgs e)
+		{
+			spbtn.Visibility=Visibility.Hidden;
+		}
+
+		private void tbCloseMouseEnter(object sender, MouseEventArgs e)
+		{
+			tbClose.Foreground = new SolidColorBrush(Colors.Red);
+		}
+
+		private void tbCloseMouseLeave(object sender, MouseEventArgs e)
+		{
+			tbClose.Foreground = new SolidColorBrush(Colors.Black);
 		}
 	}
 }

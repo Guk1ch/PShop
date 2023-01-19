@@ -14,40 +14,39 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Collections.ObjectModel;
 using PShop.DataBase;
-using Pen = PShop.DataBase.Pen;
 
 namespace PShop.Pages
 {
 	/// <summary>
-	/// Логика взаимодействия для PenPage.xaml
+	/// Логика взаимодействия для ClientsPage.xaml
 	/// </summary>
-	public partial class PenPage : Page
+	public partial class ClientsPage : Page
 	{
-		public static ObservableCollection<Pen> pens { get; set; }
-		public PenPage()
+		public static ObservableCollection<Client> clients { get; set; }
+		public ClientsPage()
 		{
 			InitializeComponent();
-			pens = new ObservableCollection<Pen>(BdConnection.connection.Pen.ToList());
+			clients = new ObservableCollection<Client>(BdConnection.connection.Client.ToList());
 			DataContext = this;
-		}
-
-		private void btnBackClick(object sender, RoutedEventArgs e)
-		{
-			NavigationService.Navigate(new MainPage());
 		}
 
 		private void btnAdd_Click(object sender, RoutedEventArgs e)
 		{
-			NavigationService.Navigate(new AddPenPage());
+			NavigationService.Navigate(new AddClientPage());
 		}
 
 		private void lvItem_SelectionChanged(object sender, SelectionChangedEventArgs e)
 		{
-			var isSelected = lvItem.SelectedItem as Pen;
-			if(isSelected != null)
+			var isSelected = lvItem.SelectedItem as Client;
+			if (isSelected != null)
 			{
-				NavigationService.Navigate(new OnePenPage());
+				NavigationService.Navigate(new ClientPage());
 			}
+		}
+
+		private void btnBack_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService.Navigate(new MainPage());
 		}
 	}
 }
