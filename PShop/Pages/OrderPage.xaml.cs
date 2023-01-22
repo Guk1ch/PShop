@@ -27,7 +27,7 @@ namespace PShop.Pages
 
 		private void btnBack_Click(object sender, RoutedEventArgs e)
 		{
-
+			NavigationService.Navigate(new OrdersPage());
 		}
 
 		private void btnDelete_Click(object sender, RoutedEventArgs e)

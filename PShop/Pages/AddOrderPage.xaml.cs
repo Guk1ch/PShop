@@ -24,5 +24,15 @@ namespace PShop.Pages
 		{
 			InitializeComponent();
 		}
+
+		private void btnSave_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
+
+		private void btnBack_Click(object sender, RoutedEventArgs e)
+		{
+
+		}
 	}
 }

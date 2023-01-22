@@ -9,6 +9,40 @@
       Title="AddOrderPage">
 
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Добавление заказа" FontSize="40" FontWeight="Bold" Grid.Column="1" Grid.ColumnSpan="2" HorizontalAlignment="Center"/>
+        <TextBlock Text="ID" FontSize="20" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="ID ручки" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="ID клиента" Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Количество" Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Дата" Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock Text="Сумма заказа" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBox x:Name="tbID" Grid.Column="2" Grid.Row="1"/>
+        <ComboBox Name="cbPen" Grid.Column="2" Grid.Row="2"/>
+        <ComboBox Name="cbClient" Grid.Column="2" Grid.Row="3"/>
+        <TextBox x:Name="tbCount" Grid.Column="2" Grid.Row="4"/>
+        <TextBox x:Name="tbDate" Grid.Column="2" Grid.Row="5"/>
+        <TextBlock x:Name="tbSum" Grid.Column="2" Grid.Row="6"/>
+
+        <Button x:Name="btnSave" Content="Сохранить" Click="btnSave_Click" Grid.Column="1" Grid.Row="7" Margin="5"  Grid.ColumnSpan="2"/>
+        <Button x:Name="btnBack" Content="Назад" Click="btnBack_Click"/>
+
     </Grid>
 </Page>
