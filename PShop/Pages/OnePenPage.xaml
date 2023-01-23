@@ -28,10 +28,9 @@
         <Button x:Name="btnDelete" Content="Удалить" Click="btnDelete_Click" Grid.Column="3"/>
         <StackPanel Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="4">
             <TextBlock Text="{Binding ID}" />
-            <TextBlock Text="{Binding Count}"/>
-            <TextBlock Text="{Binding Client.Name}"/>
-            <TextBlock Text="{Binding  Id_Pen}"/>
-            <TextBlock Text="{Binding SumOrder}"/>
+            <TextBlock Text="{Binding Price}"/>
+            <TextBlock Text="{Binding Color}"/>
+            <TextBlock Text="{Binding  Size}"/>
         </StackPanel>
 
     </Grid>

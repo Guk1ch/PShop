@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Collections.ObjectModel;
+using PShop.DataBase;
+
 
 namespace PShop.Pages
 {
@@ -19,10 +22,29 @@ namespace PShop.Pages
 	/// Логика взаимодействия для ClientPage.xaml
 	/// </summary>
 	public partial class ClientPage : Page
-	{
-		public ClientPage()
+	{ public static Client client1 { get; set; }
+		public ClientPage(Client client)
 		{
 			InitializeComponent();
+			client1 = client;
+			DataContext = client1;
+		}
+
+		private void btnBack_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService.Navigate(new ClientsPage());
+		}
+
+		private void btnEdit_Click(object sender, RoutedEventArgs e)
+		{
+			NavigationService.Navigate(new EditClientPage(client1));
+		}
+
+		private void btnDelete_Click(object sender, RoutedEventArgs e)
+		{
+			BdConnection.connection.Client.Remove(client1);
+			BdConnection.connection.SaveChanges();
+			NavigationService.Navigate(new ClientsPage());
 		}
 	}
 }

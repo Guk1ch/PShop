@@ -46,7 +46,7 @@ namespace PShop.Pages
 			var isSelected = lvItem.SelectedItem as Pen;
 			if(isSelected != null)
 			{
-				NavigationService.Navigate(new OnePenPage());
+				NavigationService.Navigate(new OnePenPage(isSelected));
 			}
 		}
 	}

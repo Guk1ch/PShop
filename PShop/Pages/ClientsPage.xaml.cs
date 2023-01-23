@@ -40,7 +40,7 @@ namespace PShop.Pages
 			var isSelected = lvItem.SelectedItem as Client;
 			if (isSelected != null)
 			{
-				NavigationService.Navigate(new ClientPage());
+				NavigationService.Navigate(new ClientPage(isSelected));
 			}
 		}
 
